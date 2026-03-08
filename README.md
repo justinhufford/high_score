@@ -1,5 +1,5 @@
 ```
-THE HIGH SCORE GAME
+=== THE HIGH SCORE GAME ===
 Try and beat the high score!
 High Score: 0
 
