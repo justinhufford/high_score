@@ -1,18 +1,19 @@
 import time
-clear = "\x1b" + "[2J" + "\x1b" + "[H"
 
 title = "The HIGH SCORE Game"
 welcome = "Try and beat the high score!"
+high_score = 0
+
+def clear_screen():
+    print("\x1b" + "[2J" + "\x1b" + "[H")
 
 # Game loop
-high_score = 0
 while True:
-    print(clear)
+    clear_screen()
     time.sleep(0.1)
     print(title)
-    print(f"High Score: {high_score}")
-    print()
     print(welcome)
+    print(f"High Score: {high_score}")
     print()
     # Get player input
     print("Enter your score:")
@@ -26,7 +27,7 @@ while True:
     try:
         score = int(player_input)
     except ValueError:
-        print(clear)
+        clear_screen()
         time.sleep(0.1)
         print("OOPS! Score must be a whole number.")
         time.sleep(1.5)
@@ -37,16 +38,19 @@ while True:
         high_score = score
 
         for i in range(3):
-            print(clear)
+            clear_screen()
             time.sleep(0.1)
             print("NEW HIGH SCORE!!!")
             time.sleep(.4)
 
     else:
-        print(clear)
+        clear_screen()
         print("Better luck next time!")
         time.sleep(1.5)
-    
+        clear_screen()
+        time.sleep(.5)
+        print("GAME OVER")
+        time.sleep(2)
     print()
     
 print("Thanks for playing!")
