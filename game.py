@@ -1,6 +1,10 @@
+"""
+=== THE HIGH SCORE GAME ===
+Try and beat the high score!
+"""
 import time
 
-title = "The HIGH SCORE Game"
+title = "The High Score Game"
 welcome = "Try and beat the high score!"
 high_score = 0
 
@@ -11,7 +15,7 @@ def clear_screen():
 while True:
     clear_screen()
     time.sleep(0.1)
-    print(title)
+    print(f"=== {title.upper()} ===")
     print(welcome)
     print(f"High Score: {high_score}")
     print()
