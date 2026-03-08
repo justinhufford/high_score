@@ -1,2 +1,1 @@
-# high_score
-The HIGH SCORE Game
+Try and beat the high score!
